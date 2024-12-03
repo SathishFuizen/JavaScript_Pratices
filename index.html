@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- //remove duplicate values in array//
+ <script>
+    const array=[2,5,6,7,2,5,7]
+
+    const uniquevalues=(array)=>{
+        let uniqueval=[];
+        for (ele of array){
+           if(uniqueval.indexOf(ele )== -1) {
+                uniqueval.push(ele);
+            }
+        }
+        return uniqueval;
+
+    }
+    console.log(uniquevalues(array))
+ </script> -->
+
+
+
+ <!-- //remove duplicate objects in array// -->
+ <!-- <script>
+    const products=[
+        {id:1,name:"apple",price:"50000"},
+        {id:2,name:"redmi",price:"10000"},
+        {id:1,name:"apple",price:"50000"},
+        {id:2,name:"redmi",price:"10000"},
+        {id:3,name:"nokia",price:"25000"}
+
+    ]
+
+    const uniqueObj=[];
+    let x=products.filter((p)=>{
+      let flag=  uniqueObj.includes(p.id);
+      if(flag){
+        return false
+      }else{
+        uniqueObj.push(p.id)
+        return true
+      }
+
+    })
+    console.log(x)
+ </script> -->
+
+
+
+ <!-- //even and odd numbers// -->
+
+ <!-- <script>
+
+    let array=[2,7,8,9,5,4]
+
+    const even=array.filter((ele)=>{
+        return ele % 2==0;
+    })
+    console.log(even,"even numbers")
+    const odd=array.filter((ele)=>{
+        return ele % 2 !==0;
+    })
+    console.log(odd,"odd numbers")
+ </script> -->
+
+
+
+ <!-- //even numbers leftsides and odd numbers rights in array// -->
+
+
+ <!-- <script>
+    let array=[2,6,3,5,7,8,10]
+    let x=array.sort((a,b)=>{
+        if(a%2 !== b%2){
+            return a%2==0?-1:1
+        }else{
+            return a>b?1:-1
+        }
+    })
+    console.log(x)
+   
+
+    
+ </script> -->
+
+
+ <!-- //mapmethod//
+ <script>
+    let array=[2,6,7,9]
+    const x=array.map((ele)=>{
+        return ele*2;
+
+    })
+    console.log(x)
+ </script> -->
+
+
+ <!-- //reducemethod//
+
+ <script>
+    let array=[2,6,7,9,10]
+    const x=array.reduce((prev,curr)=>{
+        return prev+curr;
+
+    })
+    console.log(x)
+ </script> -->
+
+
+ <!-- //Promises// -->
+
+
+ <script>
+    function hello(){
+        // return new Promise((res,rej)=>{
+        //     let sucesss=false;
+        //     if(sucesss){
+        //         res("hello world")
+        //     }else{
+        //         rej("bye")
+        //     }
+
+        // })
+
+        return new Promise((res,rej)=>{
+            setTimeout(()=>{
+                const data={id:1,name:"sathish"}
+
+const india=true;
+if(india){
+    res(data)
+}else{
+    rej("data is not matched")
+}
+
+},5000)
+
+            })
+          
+    }
+    hello().then((data)=>{
+        console.log(data,"11111111111")
+    }).catch((err)=>{
+        console.log(err)
+
+    })
+ </script>
+ 
+
+
+
+
+
+    
+</body>
+</html>
